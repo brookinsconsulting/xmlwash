@@ -93,6 +93,12 @@ None, but feel free to send me a mail (ez AT sydesy DOT com) if you find one.
 7. Thanks possible evolutions
 --------------------------------
 
+Claudia sent me a class that allows to shorten the html without taking into account the chars used by the tags. This is much clever than how it's done by default.
+Unfortunately, I don't have the time right now to integrate that with the rest, I put her code in classes/teaser.php
+
+If one of you can integrate it, I'd be delighted to give him/her svn write access on the project so we can share this success.
+
+
 8. Disclaimer & Copyright
 -------------------------
 /*
