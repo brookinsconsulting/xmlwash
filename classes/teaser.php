@@ -415,7 +415,7 @@ class HtmlTeaser
 
    function setAddTextBeforeTagArr($addTextBeforeTagArr)
    {
-     if(is_array($text))
+     if(is_array($addTextBeforeTagArr))
      {
        $this->addTextBeforeTagArr = $addTextBeforeTagArr;
      }
