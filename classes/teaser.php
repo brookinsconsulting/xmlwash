@@ -328,7 +328,7 @@ class HtmlTeaser
    function addTextToResult()
    {
      //now add the addText
-     if($this->addText)
+     if($this->addText && strlen($this->resultText) > $this->teaserLength)
      {
        //if the text ends with a tag from addTextBeforeTagArr, add addtext before this tag
        if(is_array($this->addTextBeforeTagArr) && in_array($this->lastTagName, $this->addTextBeforeTagArr)
