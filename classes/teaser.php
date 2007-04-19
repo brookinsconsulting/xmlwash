@@ -156,6 +156,18 @@ class HtmlTeaser
          //we extract a few more characters to get a range for fetching the last space
          $plainText = substr($this->fullText, $i, $this->teaserLength + $this->fuzzyness - $plainLength);
          $lastSpacePos = strrpos($plainText, ' ');
+         
+         //double check start position of next tag
+       	 $tagStartPos = strpos($this->fullText, '<', $i);
+       	 if($tagStartPos !== false)
+       	 {
+       	 	$tagStartPos = $tagStartPos - $i;
+       	 	if ($tagStartPos < $lastSpacePos)
+       	 	{
+       	 		$lastSpacePos = strrpos(substr($plainText, 0, $tagStartPos), ' ');
+       	 	}
+       	 }
+         
          if($lastSpacePos && $lastSpacePos >= (strlen($plainText) - (2 * $this->fuzzyness)))
          {
            $this->resultText .= substr($plainText, 0, $lastSpacePos);
