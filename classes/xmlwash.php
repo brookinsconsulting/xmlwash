@@ -21,7 +21,7 @@ class XMLWashOperator
     */
     function operatorList()
     {
-        return array( 'xmlwash' , 'strip_tags', 'xmlwash' );
+        return array( 'xmlwash' , 'strip_tags', 'teaser' );
     }
     /*!
      \return true to tell the template engine that the parameter list exists per operator type,
