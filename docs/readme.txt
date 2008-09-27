@@ -25,7 +25,7 @@ This operator allows to clean in a clever way an xhtml field. Its main goal is t
 
 It's mostly a wrapper around the safehtml library.
 
-2. Shoren Problem 
+2. Shorten Problem 
 -----------------
 
 Let's take the line tpl of article, it displays the title+ introduction. Unfortunately, there isn't a simple way to limit the length of that introduction, and some authors have a rather extensive interpretation of it (bless them, some put the complete article into the introduction). You can go the hard way and try to make them understand that introduction means, err, an introduction, or do it the easy way and truncate the introduction to a length you find normal.
