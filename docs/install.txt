@@ -12,4 +12,8 @@ Installation instructions:
   [ExtensionSettings]
   ActiveExtensions[]=xmlwash
 
+******************
 
+For eZ Publish versions prior to 4.0, use "3.x/xmlwash"
+
+****************** 
