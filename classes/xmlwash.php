@@ -58,7 +58,7 @@ class XMLWashOperator
       $temp=$operatorValue;
       switch ($operatorName) {
         case 'xmlwash':
-          $parser =& new SafeHTML();
+          $parser = new SafeHTML();
           //      eZDebug::writeNotice($temp);
           $operatorValue  = $parser->parse($temp);
 	  	//      $operatorValue = $temp;
@@ -70,7 +70,7 @@ class XMLWashOperator
 		  $operatorValue = strip_tags($temp,$tags);
 	  	break;
 	  	case 'teaser':
-		  $teaser =& new HtmlTeaser($temp);
+		  $teaser = new HtmlTeaser($temp);
 		  $iniSQ = eZINI::instance("ezxml.ini");
 		  
 		  if ( $iniSQ->hasVariable( 'Teaser', 'Fuzzyness' ) ) {
