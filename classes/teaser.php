@@ -340,29 +340,32 @@ class HtmlTeaser
    function addTextToResult()
    {
      //now add the addText
-     if($this->addText && strlen($this->resultText) > $this->teaserLength)
+     if($this->addText) 
      {
-       //if the text ends with a tag from addTextBeforeTagArr, add addtext before this tag
-       if(is_array($this->addTextBeforeTagArr) && in_array($this->lastTagName, $this->addTextBeforeTagArr)
-          && strrpos($this->resultText, '>') === strlen($this->resultText) - 1)
-       {
-         $lastTagPos = strrpos($this->resultText, '<');
-         if($lastTagPos)
-         {
-           $this->resultText = rtrim(substr($this->resultText, 0, strrpos($this->resultText, '<')), '-,.!?:;') 
-                       . $this->addText
-                       . $this->formatTag($this->lastTagName, $this->lastTagType);
-         }
-         else
-         {
-           $this->resultText = rtrim(substr($this->resultText, 0, strrpos($this->resultText, '<')), '-,.!?:;') . $this->addText; 
-         } 
-       }
-       else
-       {
-         $this->resultText = rtrim($this->resultText, '-,.!?:;') . $this->addText;
-       }
-     }
+	     if ( strlen($this->resultText) < strlen($this->fullText) )
+	     {
+	       //if the text ends with a tag from addTextBeforeTagArr, add addtext before this tag
+	       if(is_array($this->addTextBeforeTagArr) && in_array($this->lastTagName, $this->addTextBeforeTagArr)
+	          && strrpos($this->resultText, '>') === strlen($this->resultText) - 1)
+	       {
+	         $lastTagPos = strrpos($this->resultText, '<');
+	         if($lastTagPos)
+	         {
+	           $this->resultText = rtrim(substr($this->resultText, 0, strrpos($this->resultText, '<')), '-,.!?:;') 
+	                       . $this->addText
+	                       . $this->formatTag($this->lastTagName, $this->lastTagType);
+	         }
+	         else
+	         {
+	           $this->resultText = rtrim(substr($this->resultText, 0, strrpos($this->resultText, '<')), '-,.!?:;') . $this->addText; 
+	         } 
+	       }
+	       else
+	       {
+	         $this->resultText = rtrim($this->resultText, '-,.!?:;') . $this->addText;
+	       }
+	     }
+     }	
    }   
    
    function formatTag($tagStr, $tagType)
