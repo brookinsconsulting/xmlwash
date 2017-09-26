@@ -1,4 +1,4 @@
-<?
+<?php
 /*!
   This operator allows to wash a xml field (XSS...). As an added value, it deals well with shortened xml fields
 */
