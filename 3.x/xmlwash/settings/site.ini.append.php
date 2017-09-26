@@ -1,3 +1,0 @@
-[TemplateSettings]
-ExtensionAutoloadPath[]=xmlwash
-
